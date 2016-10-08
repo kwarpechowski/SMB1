@@ -1,14 +1,15 @@
 package pl.pjatk.smb1;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import pl.pjatk.smb1.Model.Product;
+import pl.pjatk.smb1.database.DatabaseHandler;
+import pl.pjatk.smb1.models.Product;
+import pl.pjatk.smb1.adapters.ProductsAdapter;
 
 public class ProductListActivity extends DefaultActivity {
 

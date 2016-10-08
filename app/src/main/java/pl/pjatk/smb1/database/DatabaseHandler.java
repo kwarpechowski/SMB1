@@ -1,4 +1,4 @@
-package pl.pjatk.smb1;
+package pl.pjatk.smb1.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
-import pl.pjatk.smb1.Model.Product;
+import pl.pjatk.smb1.models.Product;
 
 /**
  * Created by kamilw on 08.10.2016.
@@ -73,7 +73,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         try {
             product_list.clear();
 
-            String selectQuery = "SELECT  * FROM " + TABLE_CONTACTS;
+            String selectQuery = "SELECT  * FROM " + TABLE_CONTACTS + " ORDER BY id DESC";
 
             SQLiteDatabase db = this.getWritableDatabase();
             Cursor cursor = db.rawQuery(selectQuery, null);

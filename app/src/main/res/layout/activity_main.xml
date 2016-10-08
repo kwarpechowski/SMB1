@@ -16,8 +16,9 @@
         android:text="@string/settings"
         android:id="@+id/settings"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="goToSettings"/>
+        android:onClick="goToSettings"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -26,5 +27,6 @@
         android:id="@+id/list"
         android:layout_below="@+id/settings"
         android:layout_alignStart="@+id/settings"
-        android:onClick="goToLst"/>
+        android:onClick="goToLst"
+        android:layout_alignEnd="@+id/settings" />
 </RelativeLayout>

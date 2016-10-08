@@ -1,4 +1,4 @@
-package pl.pjatk.smb1;
+package pl.pjatk.smb1.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +13,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import pl.pjatk.smb1.Model.Product;
+import pl.pjatk.smb1.database.DatabaseHandler;
+import pl.pjatk.smb1.models.Product;
+import pl.pjatk.smb1.ProductEditActivity;
+import pl.pjatk.smb1.R;
 
 /**
  * Created by kamilw on 08.10.2016.
