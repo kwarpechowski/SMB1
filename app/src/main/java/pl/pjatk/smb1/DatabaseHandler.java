@@ -51,6 +51,21 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void Update_Product(Product product) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_NAME, product.getName());
+        values.put(KEY_ACTIVE, product.isActive());
+        db.update(TABLE_CONTACTS, values, "id="+product.getId(), null);
+        Log.i("SMB", "update " + product.isActive());
+        db.close();
+    }
+
+    public void Remove_Product(Product product) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_CONTACTS, "id="+product.getId(), null);
+        db.close();
+    }
 
     public ArrayList<Product> Get_Products() {
         try {
@@ -65,7 +80,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     Product product = new Product();
                     product.setId(Integer.parseInt(cursor.getString(0)));
                     product.setName(cursor.getString(1));
-                    product.setActive(Boolean.parseBoolean(cursor.getString(2)));
+
+                    int t = Integer.parseInt(cursor.getString(2));
+                    product.setActive((t == 1));
                     product_list.add(product);
                 } while (cursor.moveToNext());
             }
