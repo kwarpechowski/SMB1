@@ -1,4 +1,4 @@
-package pl.pjatk.smb1;
+package pl.pjatk.smb1.Model;
 
 /**
  * Created by kamilw on 08.10.2016.

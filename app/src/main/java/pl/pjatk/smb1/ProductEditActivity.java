@@ -3,9 +3,10 @@ package pl.pjatk.smb1;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+
+import pl.pjatk.smb1.Model.Product;
 
 public class ProductEditActivity extends AppCompatActivity {
 
@@ -21,12 +22,10 @@ public class ProductEditActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         int pId = i.getIntExtra("product", 0);
-        Log.i("test", pId + "");
 
         DatabaseHandler db = new DatabaseHandler(this);
         product = db.getProduct(pId);
         db.close();
-
 
         name.setText(product.getName());
 

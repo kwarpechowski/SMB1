@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import pl.pjatk.smb1.Model.Product;
+
 public class AddProductActivity extends AppCompatActivity {
 
     private DatabaseHandler db;

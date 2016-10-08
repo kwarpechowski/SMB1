@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SMB1</string>
+    <string name="save">Zapisz</string>
+    <string name="remove">Usuń</string>
+    <string name="edit">Edytuj</string>
+    <string name="add">Dodaj</string>
+    <string name="settings">Ustawienia</string>
+    <string name="list">Lista</string>
 </resources>

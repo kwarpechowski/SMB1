@@ -7,12 +7,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/mainLayout"
     tools:context="pl.pjatk.smb1.MainActivity">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Opcje"
+        android:text="@string/settings"
         android:id="@+id/settings"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -21,7 +22,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lista"
+        android:text="@string/list"
         android:id="@+id/list"
         android:layout_below="@+id/settings"
         android:layout_alignStart="@+id/settings"

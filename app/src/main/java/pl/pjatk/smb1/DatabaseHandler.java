@@ -9,6 +9,8 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
+import pl.pjatk.smb1.Model.Product;
+
 /**
  * Created by kamilw on 08.10.2016.
  */
