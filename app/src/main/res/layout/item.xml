@@ -10,4 +10,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text=""
         android:id="@+id/name" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch1"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

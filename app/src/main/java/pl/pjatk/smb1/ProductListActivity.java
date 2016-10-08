@@ -19,18 +19,11 @@ public class ProductListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_product_list2);
 
        this.bind_list();
-        this.bind_add();
     }
 
-    private void bind_add() {
-        final Button button = (Button) findViewById(R.id.add_button);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent i = new Intent(ProductListActivity.this, AddProductActivity.class);
-                startActivity(i);
-            }
-        });
-
+    public void goToAdd(View v) {
+        Intent i = new Intent(this, AddProductActivity.class);
+        startActivity(i);
     }
 
     private void bind_list() {

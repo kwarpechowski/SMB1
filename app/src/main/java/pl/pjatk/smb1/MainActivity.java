@@ -12,22 +12,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
 
-        final Button button = (Button) findViewById(R.id.settings);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, OptionsActivity.class);
-                startActivity(i);
-            }
-        });
+    public void goToLst(View v) {
+        Intent i = new Intent(this, ProductListActivity.class);
+        startActivity(i);
+    }
 
-        final Button button2 = (Button) findViewById(R.id.list);
-        button2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, ProductListActivity.class);
-                startActivity(i);
-            }
-        });
-
+    public void goToSettings(View v) {
+        Intent i = new Intent(this, OptionsActivity.class);
+        startActivity(i);
     }
 }

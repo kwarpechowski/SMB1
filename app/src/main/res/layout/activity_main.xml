@@ -15,7 +15,8 @@
         android:text="Opcje"
         android:id="@+id/settings"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="goToSettings"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -23,5 +24,6 @@
         android:text="Lista"
         android:id="@+id/list"
         android:layout_below="@+id/settings"
-        android:layout_alignStart="@+id/settings" />
+        android:layout_alignStart="@+id/settings"
+        android:onClick="goToLst"/>
 </RelativeLayout>

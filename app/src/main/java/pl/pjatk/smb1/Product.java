@@ -9,6 +9,8 @@ public class Product {
 
     private String name;
 
+    private boolean isActive;
+
     public int getId() {
         return id;
     }
@@ -23,5 +25,13 @@ public class Product {
 
     public void setName(String n) {
         this.name = n;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
     }
 }

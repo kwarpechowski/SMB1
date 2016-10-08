@@ -30,6 +30,7 @@ public class AddProductActivity extends AppCompatActivity {
 
                 EditText name   = (EditText)findViewById(R.id.name);
                 n.setName(name.getText().toString());
+                n.setActive(true);
                 db.Add_Product(n);
 
                 Intent i = new Intent(AddProductActivity.this, ProductListActivity.class);
