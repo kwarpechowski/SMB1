@@ -21,7 +21,7 @@ public class ProductEditActivity extends DefaultActivity {
         name = (EditText)findViewById(R.id.name);
 
         Intent i = getIntent();
-        int pId = i.getIntExtra("product", 0);
+        int pId = i.getIntExtra(getString(R.string.product), 0);
 
         DatabaseHandler db = new DatabaseHandler(this);
         product = db.getProduct(pId);

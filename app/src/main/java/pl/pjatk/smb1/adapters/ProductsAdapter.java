@@ -70,7 +70,7 @@ public class ProductsAdapter extends ArrayAdapter<Product> {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(ctx, ProductEditActivity.class);
-                i.putExtra("product", product.getId());
+                i.putExtra(ctx.getString(R.string.product), product.getId());
                 ctx.startActivity(i);
             }
         });
