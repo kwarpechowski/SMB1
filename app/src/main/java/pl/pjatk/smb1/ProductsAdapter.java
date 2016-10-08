@@ -1,6 +1,7 @@
 package pl.pjatk.smb1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,6 +58,16 @@ public class ProductsAdapter extends ArrayAdapter<Product> {
                 db.Remove_Product(product);
                 db.close();
                 notifyDataSetChanged();
+            }
+        });
+
+        Button editbtn = (Button) convertView.findViewById(R.id.edit);
+        editbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ctx, ProductEditActivity.class);
+                i.putExtra("product", product.getId());
+                ctx.startActivity(i);
             }
         });
 

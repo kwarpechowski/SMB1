@@ -30,7 +30,7 @@ public class ProductListActivity extends AppCompatActivity {
         ListView yourListView = (ListView) findViewById(R.id.listView);
         DatabaseHandler db = new DatabaseHandler(this);
         ArrayList<Product> list = db.Get_Products();
-        yourListView .setAdapter(new ProductsAdapter(this, list));
+        yourListView.setAdapter(new ProductsAdapter(this, list));
         db.close();
     }
 }

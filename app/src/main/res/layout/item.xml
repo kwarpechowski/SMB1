@@ -24,4 +24,11 @@
         android:id="@+id/remove"
         android:layout_gravity="right" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edytuj"
+        android:id="@+id/edit"
+        android:layout_gravity="right" />
+
 </LinearLayout>

@@ -95,4 +95,23 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         return product_list;
     }
+
+    public Product getProduct(int pId) {
+        String selectQuery = "SELECT * FROM " + TABLE_CONTACTS + " WHERE id=" + pId;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            Product product = new Product();
+            product.setId(Integer.parseInt(cursor.getString(0)));
+            product.setName(cursor.getString(1));
+
+            int t = Integer.parseInt(cursor.getString(2));
+            product.setActive((t == 1));
+            return product;
+        } else {
+            return null;
+        }
+
+    }
 }
