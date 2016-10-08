@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 import pl.pjatk.smb1.Model.Product;
 
-public class ProductEditActivity extends AppCompatActivity {
+public class ProductEditActivity extends DefaultActivity {
 
     private EditText name;
     private Product product;

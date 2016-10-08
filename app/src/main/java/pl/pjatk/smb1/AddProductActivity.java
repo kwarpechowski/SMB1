@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 import pl.pjatk.smb1.Model.Product;
 
-public class AddProductActivity extends AppCompatActivity {
+public class AddProductActivity extends DefaultActivity {
 
     private DatabaseHandler db;
     private AddProductActivity activity;

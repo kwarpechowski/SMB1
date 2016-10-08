@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import pl.pjatk.smb1.Model.Product;
 
-public class ProductListActivity extends AppCompatActivity {
+public class ProductListActivity extends DefaultActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
