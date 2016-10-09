@@ -8,4 +8,5 @@
     <string name="list">Lista</string>
     <string name="darkMode">darkMode</string>
     <string name="product">product</string>
+    <string name="back">Powrót</string>
 </resources>

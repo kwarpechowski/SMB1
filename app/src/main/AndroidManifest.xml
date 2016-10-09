@@ -18,7 +18,13 @@
         <activity android:name=".ProductListActivity" />
         <activity android:name=".OptionsActivity" />
         <activity android:name=".AddProductActivity" />
-        <activity android:name=".ProductEditActivity"></activity>
+        <activity android:name=".ProductEditActivity" />
+
+        <provider
+            android:name=".data.ProductProvider"
+            android:authorities="pl.pjatk.smb1.product"
+            android:enabled="true"
+            android:exported="true"></provider>
     </application>
 
 </manifest>
