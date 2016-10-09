@@ -41,7 +41,8 @@ public class ProductEditActivity extends DefaultActivity {
 
         ContentValues values = new ContentValues();
         values.put(ProductsContract.ProductEntry.KEY_NAME, name.getText().toString());
-        getContentResolver().update(ProductsContract.ProductEntry.CONTENT_URI, values, ProductsContract.ProductEntry.KEY_ID+"="+pId, null);
+
+        db.UpdateById(values, pId);
 
         Intent i = new Intent(this, ProductListActivity.class);
         startActivity(i);

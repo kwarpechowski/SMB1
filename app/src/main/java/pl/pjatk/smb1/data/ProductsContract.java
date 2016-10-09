@@ -24,8 +24,6 @@ public class ProductsContract {
         public static final String CONTENT_DIR_TYPE =
                 ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + TABLE_PRODUCTS;
 
-        public static final String CONTENT_ITEM_TYPE =
-                ContentResolver.CURSOR_ITEM_BASE_TYPE +"/" + CONTENT_AUTHORITY + "/" + TABLE_PRODUCTS;
 
         // for building URIs on insertion
         public static Uri buildProductsUri(long id){

@@ -35,7 +35,6 @@ public class OptionsActivity extends DefaultActivity {
         editor.putBoolean(getString(R.string.darkMode), sw.isChecked());
         editor.commit();
 
-
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }

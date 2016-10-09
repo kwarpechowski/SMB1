@@ -1,5 +1,6 @@
 package pl.pjatk.smb1.data;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -50,4 +51,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public void UpdateById(ContentValues values, int pId) {
+        ctx.getContentResolver().update(ProductsContract.ProductEntry.CONTENT_URI, values, ProductsContract.ProductEntry.KEY_ID+"="+pId, null);
+
+    }
 }

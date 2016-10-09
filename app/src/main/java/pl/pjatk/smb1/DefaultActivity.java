@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 /**
  * Created by kamilw on 08.10.2016.
  */
-public class DefaultActivity extends AppCompatActivity {
+public abstract class DefaultActivity extends AppCompatActivity {
 
 
     @Override

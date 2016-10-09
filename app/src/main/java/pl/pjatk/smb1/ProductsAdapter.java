@@ -1,4 +1,4 @@
-package pl.pjatk.smb1.data;
+package pl.pjatk.smb1;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import pl.pjatk.smb1.ProductEditActivity;
 import pl.pjatk.smb1.R;
+import pl.pjatk.smb1.data.DatabaseHandler;
+import pl.pjatk.smb1.data.ProductsContract;
 
 /**
  * Created by kamilw on 08.10.2016.
@@ -51,7 +53,7 @@ public class ProductsAdapter extends CursorAdapter {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 ContentValues values = new ContentValues();
                 values.put(ProductsContract.ProductEntry.KEY_ACTIVE, isChecked);
-                ctx.getContentResolver().update(ProductsContract.ProductEntry.CONTENT_URI, values, ProductsContract.ProductEntry.KEY_ID+"="+id, null);
+                db.UpdateById(values, id);
 
             }
         });

@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.ListView;
 
 import pl.pjatk.smb1.data.DatabaseHandler;
-import pl.pjatk.smb1.data.ProductsAdapter;
 
 public class ProductListActivity extends DefaultActivity {
 
