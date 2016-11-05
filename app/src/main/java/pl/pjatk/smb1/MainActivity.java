@@ -11,13 +11,24 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class MainActivity extends DefaultActivity {
+    private TextView header;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        header = (TextView) findViewById(R.id.textView2);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        String headerText = sharedPref.getString(getString(R.string.header), "");
+        header.setText(headerText);
     }
 
     public void goToLst(View v) {
